@@ -19,15 +19,15 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		if (tree->left)
 		/*counter left sum 1 unit and call the function again*/
 		/*until finish*/
-		counter_left = 1 + binary_tree_height(tree->left);
+			counter_left = 1 + binary_tree_height(tree->left);
 		if (tree->right)
 		/*counter right sum 1 and call the function again until finish*/
-		counter_right = 1 + binary_tree_height(tree->left);
+			counter_right = 1 + binary_tree_height(tree->left);
 	/*Compare between left or right counter who is greater*/
-		if (counter_left < counter_right)
-			return (counter_right);
-		else
+		if (counter_left > counter_right)
 			return (counter_left);
+		else
+			return (counter_right);
 	}
 	return (0);
 }
