@@ -13,19 +13,21 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	size_t counter_right = 0;
 
 	/*Checks if tree exists*/
-	if (tree == NULL)
-		return (0);
-	/*Check if tree has a left_child*/
-	if (tree->left)
+	if (tree)
+	{
+/*Check if tree has a left_child*/
+		if (tree->left)
 		/*counter left sum 1 unit and call the function again*/
 		/*until finish*/
 		counter_left = 1 + binary_tree_height(tree->left);
-	if (tree->right)
+		if (tree->right)
 		/*counter right sum 1 and call the function again until finish*/
 		counter_right = 1 + binary_tree_height(tree->left);
 	/*Compare between left or right counter who is greater*/
-	if (counter_left < counter_right)
-		return (counter_right);
-	else
-		return (counter_left);
+		if (counter_left < counter_right)
+			return (counter_right);
+		else
+			return (counter_left);
+	}
+	return (0);
 }
