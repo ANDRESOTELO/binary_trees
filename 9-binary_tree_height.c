@@ -24,7 +24,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		/*counter right sum 1 and call the function again until finish*/
 			counter_right = 1 + binary_tree_height(tree->left);
 	/*Compare between left or right counter who is greater*/
-		if (counter_left > counter_right)
+		if (counter_left >= counter_right)
 			return (counter_left);
 		else
 			return (counter_right);
