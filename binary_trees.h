@@ -87,4 +87,7 @@ int binary_tree_is_full(const binary_tree_t *tree);
 /*Function that checks if a binary tree is perfect*/
 int binary_tree_is_perfect(const binary_tree_t *tree);
 
+/*Function that finds the sibling of a node*/
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+
 #endif /* _BINARY_TREES_H_ */
