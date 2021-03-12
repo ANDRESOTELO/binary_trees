@@ -93,4 +93,7 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 /*Function that finds the uncle of a node*/
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
+/*Function that performs a left-rotation on a binary tree*/
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
